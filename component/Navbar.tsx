@@ -5,7 +5,7 @@ import { Flex } from "@chakra-ui/react";
 const Navbar = ({}) => {
     return (
         
-    <Flex className="navbar" justify="space-between"  py={2} px={50}>     
+    <Flex className="navbar" justify="space-between"  py={2} px={100}>     
         <h2>Lists</h2>
         <Flex alignItems="center" >
             <div >

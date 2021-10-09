@@ -1,6 +1,6 @@
 const List = () => {
     return (
-        <div>
+        <div className="home">
             <h1>List</h1>
         </div>
     )

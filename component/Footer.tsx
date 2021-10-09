@@ -1,8 +1,8 @@
 const Footer = () => {
     return (
-        <div>
-            <h1>Footer</h1>
-        </div>
+        <footer>
+           @ all copy rights list 
+        </footer>
     )
 }
 export default Footer;
