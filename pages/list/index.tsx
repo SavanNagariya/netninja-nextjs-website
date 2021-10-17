@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { SimpleGrid, Box, Center } from "@chakra-ui/react";
+import Link from "next/dist/client/link";
 
 export const getStaticProps = async () => {
   const res = await fetch("https://jsonplaceholder.typicode.com/users");
@@ -10,8 +11,12 @@ export const getStaticProps = async () => {
   };
 };
 
-const List = ({ lists }: any) => {
-  console.log(lists);
+type Item = {
+  id;
+  name: string;
+};
+
+const List = ({ lists }: { lists: Item[] }) => {
   return (
     <>
       <Head>
@@ -20,13 +25,13 @@ const List = ({ lists }: any) => {
       <div className="list">
         <h1>List</h1>
         {lists.map((list) => (
-          <SimpleGrid column={4} key={list.id}>
+          <Link href={"/list/" + list.id} key={list.id}>
             <Center>
               <Box p={10} m={3} w={200} backgroundColor="cadetblue">
                 {list.name}
               </Box>
             </Center>
-          </SimpleGrid>
+          </Link>
         ))}
       </div>
     </>
